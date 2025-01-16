@@ -1,0 +1,14 @@
+{
+    "name": "sound-jar",
+    "version": "1.0.0",
+    "description": "Spotify OAuth demo",
+    "main": "src/api/spotifyAuth.js",
+    "type": "module",
+    "scripts": {
+        "start": "node src/api/spotifyAuth.js"
+    },
+    "dependencies": {
+        "axios": "^1.7.9",
+        "http-server": "^14.1.1"
+    }
+}
