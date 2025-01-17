@@ -20,20 +20,30 @@ async function getToken() {
     return accessToken;
 }        
 
-async function init() {
+const axiosInstance = null;
+export async function init() {
     const token = await getToken();
     if (!token) {
         console.error('No access token found.');
     return;
-}
-const instance = axios.create({
-    baseURL: 'https://api.spotify.com/v1',
-    headers: {
+    }
+    axiosInstance = axios.create({
+        baseURL: 'https://api.spotify.com/v1',
+        headers: {
         'Authorization': `Bearer ${token}`,
-    },
-});
+        }
+    })
+}
+export function getAxiosInstance() {
+    if (!axiosInstance) {
+        console.error("Error creating axios instance.");
+    }
+    return axiosInstance;
+}
 
-innstance.get('/me').then((response) => {
+export {axiosInstance};
+
+axiosInstance.get('/me').then((response) => {
     console.log(response);
 });
 }
