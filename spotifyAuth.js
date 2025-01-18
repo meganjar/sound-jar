@@ -1,7 +1,7 @@
 // redirect user to /authorization endpoint to log in and grant Permissions
 const clientId = "e5c13bb90ece4c53be7b2a78ed68f5e6";
 const clientSecret = "34bb26f2509c45dc8da4570e783ae899";
-const redirectUri = "http://localhost:5501/callback.html";
+const redirectUri = "https://meganjar.github.io/sound-jar/callback.html";
 // permissions being requested
 const scopes = "user-top-read playlist-modify-public";
 // build auth url

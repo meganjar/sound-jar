@@ -32,7 +32,7 @@ async function getTopSongs() {
                 <td>${i + 1}</td>
                 <td><img src="${
                   response.data.items[i].album.images[0].url
-                }" alt="Cover" style="width: 20px;"></td>
+                }" alt="Cover" style="width: 50px;"></td>
                 <td>${response.data.items[i].name}</td>
                 <td>${response.data.items[i].artists[0].name}</td>
 
