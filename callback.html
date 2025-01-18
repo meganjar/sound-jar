@@ -1,48 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- bootstrap -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-     <!-- css file -->
-     <link rel="stylesheet" href="./styles.css">    
-     <!-- axios -->
-     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-      <!-- js files -->
-      <script type="module" src="./index.js" defer></script>
-      <script type="module" src="./callback.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- css file -->
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- js files -->
+    <script type="module" src="./index.js" defer></script>
+    <script type="module" src="./callback.js" defer></script>
 
     <title>Document</title>
-</head>
-<body class="container">
+  </head>
+  <body class="container">
     <h1 class="mb-4">You've successfully connected to Spotify</h1>
     <div id="buttons-div">
-        <button id="about-me-bttn" onclick="getAboutMe()" class="btn-dark">About Me</button> 
-        <button id="top-songs-bttn" onclick="getTopSongs()" class="btn-dark">My Top Songs</button> 
+      <button id="about-me-bttn" onclick="getAboutMe()" class="btn-dark">
+        About Me
+      </button>
+      <button id="top-songs-bttn" onclick="getTopSongs()" class="btn-dark">
+        My Top Songs
+      </button>
     </div>
-    <div id="about-me" class="mb-4" style="display: none;">
-        <h2>About Me</h2>
-        <p id="about-me-data"></p>
+    <div id="about-me" class="mb-4" style="display: none">
+      <h2>About Me</h2>
+      <p id="about-me-data"></p>
     </div>
-    <a id="auth-url" href="#" style="display: none;"></a>
-    <div id="topSongsTable" class="mb-4" style="display: none;">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Cover</th>
-                    <th>Title</th>
-                    <th>Artist</th>
-                    <th>Duration</th>
-                </tr>
-            </thead>
-            <tbody id="topSongsBody">
-                <!--songs data -->
-            </tbody>
-        </table>
+    <a id="auth-url" href="#" style="display: none"></a>
+    <div id="topSongsTable" class="mb-4" style="display: none">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Cover</th>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody id="topSongsBody">
+          <!--songs data -->
+        </tbody>
+      </table>
     </div>
     <script type="module" src="./index.js" defer></script>
-</body>
-    
+  </body>
 </html>

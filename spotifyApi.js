@@ -1,4 +1,3 @@
-
 // On the roadmap is another function that will make a post req :
 
 // async function createPlaylist() {
