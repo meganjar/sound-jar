@@ -17,6 +17,7 @@ async function getAboutMe() {
 
         aboutMeEl.textContent = `Name: ${response.data.display_name}, Followers: ${response.data.followers.total}`;
         aboutMeDiv.style.display = "block";
+        document.getElementById('topSongsTable').style.display = "none";
 
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -28,6 +29,8 @@ async function getTopSongs() {
     try {
         const response = await axiosInstance.get('/me/top/tracks');
         console.log(response.data);
+        document.getElementById('topSongsTable').style.display = "block";
+        aboutMeDiv.style.display = "none";
         for (let i = 0; i < 21; i++) {
             const row = document.createElement('tr');
             row.innerHTML = `
